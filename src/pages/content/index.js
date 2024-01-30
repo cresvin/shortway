@@ -18,7 +18,7 @@ const handleShortcuts = (element) => {
 
   if (shortcut) {
     const regex = new RegExp(shortcut.prefix, "g");
-    const newValue = value.replace(regex, `${shortcut.content} `);
+    const newValue = value.replace(regex, shortcut.content);
     element.value = newValue;
   }
 };
