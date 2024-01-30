@@ -1,3 +1,4 @@
+import { getShortcuts } from "@/helpers/getShortcuts";
 import { useEffect, useState } from "react";
 import AddNewShortcut from "./components/AddNewShortcut";
 import Header from "./components/Header";
@@ -7,11 +8,9 @@ export default function Popup() {
   const [shortcuts, setShortcuts] = useState([]);
 
   useEffect(() => {
-    const getShortcuts = async () => {
-      const result = await chrome.storage.local.get("shortcuts");
-      setShortcuts(result.shortcuts || []);
-    };
-    getShortcuts();
+    (async () => {
+      setShortcuts(await getShortcuts());
+    })();
   }, []);
 
   return (

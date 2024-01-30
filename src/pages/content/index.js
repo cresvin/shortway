@@ -1,13 +1,13 @@
+import { getShortcuts } from "@/helpers/getShortcuts";
+
 const textareas = Array.from(document.querySelectorAll("textarea"));
 const inputs = Array.from(document.querySelectorAll("input[type='text']"));
 
 let shortcuts = [];
 
-async function getShortcuts() {
-  const result = await chrome.storage.local.get("shortcuts");
-  shortcuts = result.shortcuts || [];
-}
-getShortcuts();
+(async () => {
+  shortcuts = await getShortcuts();
+})();
 
 const handleShortcuts = (element) => {
   const value = element.value;
