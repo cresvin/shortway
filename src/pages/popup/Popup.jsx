@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import AddBtn from "./components/AddBtn";
+import AddNewShortcut from "./components/AddNewShortcut";
+import Header from "./components/Header";
 import ShortcutsContainer from "./components/ShortcutsContainer";
 
 export default function Popup() {
@@ -15,8 +16,8 @@ export default function Popup() {
 
   return (
     <div className="flex flex-col">
-      <h1 className="text-2xl font-bold mb-5">Shortway</h1>
-      <AddBtn shortcuts={shortcuts} setShortcuts={setShortcuts} />
+      <Header />
+      <AddNewShortcut shortcuts={shortcuts} setShortcuts={setShortcuts} />
       <ShortcutsContainer shortcuts={shortcuts} setShortcuts={setShortcuts} />
     </div>
   );

@@ -33,13 +33,13 @@ export default function AddBtn({ shortcuts, setShortcuts }) {
       <input
         type="text"
         placeholder="Prefix ex. !hi"
-        className="grow outline-none focus:ring-1 ring-indigo-500 bg-zinc-900 placeholder:text-zinc-500 rounded-md px-4"
         ref={prefixRef}
+        className="bg-inherit placeholder:text-zinc-400 border px-4 py-2 rounded-md outline-none focus:border-zinc-700 border-zinc-800"
       />
       <input
         type="text"
         placeholder="Content ex. hello"
-        className="grow outline-none focus:ring-1 ring-indigo-500 bg-zinc-900 placeholder:text-zinc-500 rounded-md px-4"
+        className="bg-inherit placeholder:text-zinc-400 border px-4 py-2 rounded-md outline-none focus:border-zinc-700 border-zinc-800"
         ref={contentRef}
       />
       <button
