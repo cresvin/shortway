@@ -20,6 +20,9 @@ export default function AddBtn({ shortcuts, setShortcuts }) {
       return;
     }
 
+    prefixRef.current.value = "";
+    contentRef.current.value = "";
+
     const newShortcuts = [...shortcuts];
     newShortcuts.push({ prefix, content });
     setShortcuts(newShortcuts);
