@@ -1,6 +1,6 @@
-import logo from "@/assets/imgs/shortway-full.svg";
 import { faGithub, faPaypal } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import logo from "../assets/imgs/shortway-full.svg";
 import { createNewTab } from "../helpers/createNewTab";
 
 export default function Header() {
