@@ -1,5 +1,6 @@
 {
   "name": "ShortWay: Sentences Shortcuts",
+  "description": "ShortWay is an intuitive Chrome extension that allows for quick creation of shortcuts for favorite sentences.",
   "version": "0.1",
   "manifest_version": 3,
   "author": "Oliwier Tkacz <oliwiertkacz1@gmail.com>",
