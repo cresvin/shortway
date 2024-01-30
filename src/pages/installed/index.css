@@ -1,0 +1,4 @@
+body {
+  @apply bg-gradient-to-t from-zinc-900 to-zinc-950 text-white text-base;
+  font-family: "Inter", sans-serif;
+}

@@ -1,15 +1,10 @@
 import { useRef } from "react";
+import { isShortcutExist } from "../helpers/isShortcutExist";
 import { reloadWindow } from "../helpers/reloadWindow";
 
-export default function NewShortcut({ shortcuts, setShortcuts }) {
+export default function AddBtn({ shortcuts, setShortcuts }) {
   const prefixRef = useRef(null);
   const contentRef = useRef(null);
-
-  const isShortcutExist = () => {
-    return shortcuts.some(
-      (shortcut) => shortcut.prefix === prefixRef.current.value
-    );
-  };
 
   const handleCreateShortcut = async () => {
     const prefix = prefixRef.current.value;
@@ -20,7 +15,7 @@ export default function NewShortcut({ shortcuts, setShortcuts }) {
       return;
     }
 
-    if (isShortcutExist()) {
+    if (isShortcutExist(shortcuts, prefix)) {
       alert("Shortcut is already exist!");
       return;
     }
@@ -51,7 +46,7 @@ export default function NewShortcut({ shortcuts, setShortcuts }) {
         onClick={handleCreateShortcut}
         className="px-4 font-medium py-2 rounded-md bg-white/90 text-black hover:bg-white transition-colors"
       >
-        Create
+        Add
       </button>
     </div>
   );
