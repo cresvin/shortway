@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { isShortcutExist } from "../helpers/isShortcutExist";
 import { reloadWindow } from "../helpers/reloadWindow";
 
-export default function AddBtn({ shortcuts, setShortcuts }) {
+export default function AddNewShortcut({ shortcuts, setShortcuts }) {
   const prefixRef = useRef(null);
   const contentRef = useRef(null);
 
