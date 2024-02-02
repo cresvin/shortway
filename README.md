@@ -4,6 +4,9 @@
 
 ![showcase](./media/showcase.png)
 
+## 🚀 Install extension
+Install extension on [Chrome Web Store](https://chromewebstore.google.com/detail/shortway-sentences-shortc/pbhonogpponfjadbooggcackpbcghidi?hl=pl&authuser=0)
+
 ## 💙 Support
 
 If you like my work, you can support me on
